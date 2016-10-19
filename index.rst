@@ -108,4 +108,6 @@ See the package overview for more detail about what's in the library.
 
     readme
     whatsnew
-
+    install
+    contributing
+    faq
