@@ -6,7 +6,7 @@ pandas-docs-zh_cn
 在线阅读地址
 -------------
 
-http://pandas-docs-zh-cn.readthedocs.io/
+http://pandas-docs-zh-cn.rtfd.io/
 
 
 代码库
