@@ -5,12 +5,13 @@
 pandas: powerful Python data analysis toolkit
 *********************************************
 
+pandas 文档中文翻译
 
-**Version**: 0.19.0
+**pandas 版本**: 0.19.0
 
-**Binary Installers:** http://pypi.python.org/pypi/pandas
+**pipy:** http://pypi.python.org/pypi/pandas
 
-**Source Repository:** http://github.com/pydata/pandas
+**源码库:** http://github.com/pydata/pandas
 
 **Issues & Ideas:** https://github.com/pydata/pandas/issues
 
@@ -104,4 +105,6 @@ See the package overview for more detail about what's in the library.
 
 .. toctree::
     :maxdepth: 4
+
+    whatsnew
 
