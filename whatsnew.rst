@@ -1,11 +1,11 @@
 .. _whatsnew:
 
 **********
-What's New
+最新进展
 **********
 
-These are new features and improvements of note in each release.
+这里记录了 pandas 的最新特性与改进。
 
-http://pandas.pydata.org/pandas-docs/stable/whatsnew.html
+对于其他历史版本的信息可以参阅这里： http://pandas.pydata.org/pandas-docs/stable/whatsnew.html
 
-.. include:: whatsnew/v0.19.0.txt
+.. include:: whatsnew/v0.19.0.rst
