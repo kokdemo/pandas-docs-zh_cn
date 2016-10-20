@@ -8,7 +8,7 @@ pandas 文档中文翻译
 http://pandas-docs-zh-cn.rtfd.io/
 
 
-代码库
+版本库
 -------
 
 https://github.com/Datartisan/pandas-docs-zh_cn
@@ -34,6 +34,12 @@ https://github.com/Datartisan/pandas-docs-zh_cn
 ---------
 
 依照 pandas v0.19.0 的文档 （ https://github.com/pandas-dev/pandas/tree/v0.19.0/doc ）
+
+
+协作交流
+---------
+
+QQ群： 84616803
 
 
 TODO
