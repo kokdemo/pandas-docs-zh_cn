@@ -4,45 +4,60 @@
 
 ============
 Installation
+安装
 ============
 
 The easiest way for the majority of users to install pandas is to install it
 as part of the `Anaconda <http://docs.continuum.io/anaconda/>`__ distribution, a
 cross platform distribution for data analysis and scientific computing.
 This is the recommended installation method for most users.
+对多数用户来说，安装pandas最轻松的方式是安装`Anaconda <http://docs.continuum.io/anaconda/>`__，其中包含了pandas。
+Anaconda是一个跨平台Python发行版，包含conda包和环境管理器，以及许多用于数据分析，数据科学和科学计算的软件包。
+对绝大多数用户来说这是推荐的安装方式。
 
 Instructions for installing from source,
 `PyPI <http://pypi.python.org/pypi/pandas>`__, various Linux distributions, or a
 `development version <http://github.com/pydata/pandas>`__ are also provided.
+提供了通过源码、`PyPI <http://pypi.python.org/pypi/pandas>`__、及许多Linux发行版进行安装的说明。
+同时也提供了`development 版本 <http://github.com/pydata/pandas>`__。
 
 Python version support
+支持的Python版本
 ----------------------
 
 Officially Python 2.7, 3.4, and 3.5
+官方Python 2.7、3.4及3.5
 
 Installing pandas
+安装pandas
 -----------------
 
 Trying out pandas, no installation required!
+立即试用，无需安装！
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The easiest way to start experimenting with pandas doesn't involve installing
 pandas at all.
+在最轻松的情况下试用pandas，无需关心安装。
 
 `Wakari <https://wakari.io>`__ is a free service that provides a hosted
 `IPython Notebook <http://ipython.org/notebook.html>`__ service in the cloud.
+`Wakari <https://wakari.io>`__是一个云端提供`IPython Notebook <http://ipython.org/notebook.html>`__的免费服务。
 
 Simply create an account, and have access to pandas from within your brower via
 an `IPython Notebook <http://ipython.org/notebook.html>`__ in a few minutes.
+几分钟内就可以简单的创建一个帐号，然后在浏览器内通过`IPython Notebook <http://ipython.org/notebook.html>`__使用pandas。
 
 .. _install.anaconda:
 
 Installing pandas with Anaconda
+通过Anaconda安装
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Installing pandas and the rest of the `NumPy <http://www.numpy.org/>`__ and
 `SciPy <http://www.scipy.org/>`__ stack can be a little
 difficult for inexperienced users.
+对经验不足的用户来说，安装pandas以及接下来的`NumPy <http://www.numpy.org/>`__、`SciPy <http://www.scipy.org/>`__相关包是较为困难的事情。
 
 The simplest way to install not only pandas, but Python and the most popular
 packages that make up the `SciPy <http://www.scipy.org/>`__ stack
