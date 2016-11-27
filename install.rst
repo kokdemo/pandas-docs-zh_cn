@@ -66,14 +66,14 @@ packages that make up the `SciPy <http://www.scipy.org/>`__ stack
 `Anaconda <http://docs.continuum.io/anaconda/>`__, a cross-platform
 (Linux, Mac OS X, Windows) Python distribution for data analytics and
 scientific computing.
-最简单的方法是，不局限于安装pandas，而是包括Python及由最流行包(`IPython <http://ipython.org/>`__, `NumPy <http://www.numpy.org/>`__,
-`Matplotlib <http://matplotlib.org/>`__, ...)组成的`SciPy <http://www.scipy.org/>`__集成包在内的`Anaconda <http://docs.continuum.io/anaconda/>`__。
-这是一个用于数据分析及科学计算的跨平台(Linux, Mac OS X, Windows)Python发行版。
+最简单的方法是，不局限于安装pandas，而是包括Python及由最流行包（`IPython <http://ipython.org/>`__, `NumPy <http://www.numpy.org/>`__,
+`Matplotlib <http://matplotlib.org/>`__, ...）组成的`SciPy <http://www.scipy.org/>`__集成包在内的`Anaconda <http://docs.continuum.io/anaconda/>`__。
+这是一个用于数据分析及科学计算的跨平台（Linux, Mac OS X, Windows）Python发行版。
 
 After running a simple installer, the user will have access to pandas and the
 rest of the `SciPy <http://www.scipy.org/>`__ stack without needing to install
 anything else, and without needing to wait for any software to be compiled.
-运行一个简单的安装器，用户就可以使用pandas以及`SciPy <http://www.scipy.org/>`__集成包内其他内容，不必再安装任何东西，也不必等待编译任何软件。
+运行一个简单的安装器，用户就可以使用pandas以及`SciPy <http://www.scipy.org/>`__集成包内其他内容，不必再安装任何东西，也不必等待任何软件编译。
 
 Installation instructions for `Anaconda <http://docs.continuum.io/anaconda/>`__
 `can be found here <http://docs.continuum.io/anaconda/install.html>`__.
@@ -88,7 +88,7 @@ An additional advantage of installing with Anaconda is that you don't require
 admin rights to install it, it will install in the user's home directory, and
 this also makes it trivial to delete Anaconda at a later date (just delete
 that folder).
-随Anaconda还有无需管理员权限这个额外的好处，它安装在用户的home目录下，将来要删除它也很容易(删除该目录即可)。
+随Anaconda还有无需管理员权限这个额外的好处，它安装在用户的home目录下，将来要删除它也很容易（删除该目录即可）。
 
 .. _install.miniconda:
 
@@ -101,19 +101,19 @@ The previous section outlined how to get pandas installed as part of the
 However this approach means you will install well over one hundred packages
 and involves downloading the installer which is a few hundred megabytes in size.
 前面的小节概述了如何让pandas作为`Anaconda <http://docs.continuum.io/anaconda/>`__ 发行版的一部分共同安装。
-然而这种方式意味着你要安装远多于100个包，并且需要下载100M出头的安装包。
+然而这种方式意味着你要安装远多于100个包，并且需要下载100M出头的安装器。
 
 If you want to have more control on which packages, or have a limited internet
 bandwidth, then installing pandas with
 `Miniconda <http://conda.pydata.org/miniconda.html>`__ may be a better solution.
-如果你想对这些包有更多的控制权，或者只有带宽有限的网络，那随`Miniconda <http://conda.pydata.org/miniconda.html>`__一起安装pandas可能是个更好的选择。
+如果你想对这些包有更多的控制权，或者只有带宽有限的网络，那用`Miniconda <http://conda.pydata.org/miniconda.html>`__安装pandas可能是个更好的选择。
 
 `Conda <http://conda.pydata.org/docs/>`__ is the package manager that the
 `Anaconda <http://docs.continuum.io/anaconda/>`__ distribution is built upon.
 It is a package manager that is both cross-platform and language agnostic
 (it can play a similar role to a pip and virtualenv combination).
 `Conda <http://conda.pydata.org/docs/>`__是`Anaconda <http://docs.continuum.io/anaconda/>`__发行版内置的包管理器。
-这是一个跨平台且语言无关的包管理器。（扮演类似于了pip及virtualenv二者结合的角色。）
+这是一个跨平台且语言无关的包管理器。（扮演类似于pip及virtualenv二者结合的角色。）
 
 `Miniconda <http://conda.pydata.org/miniconda.html>`__ allows you to create a
 minimal self contained Python installation, and then use the
@@ -126,51 +126,64 @@ downloading and running the `Miniconda
 <http://conda.pydata.org/miniconda.html>`__
 will do this for you. The installer
 `can be found here <http://conda.pydata.org/miniconda.html>`__
+首先你需要将`Conda <http://conda.pydata.org/docs/>`__安装好，下载及安装`Miniconda <http://conda.pydata.org/miniconda.html>`__即可。
+安装器可以在`这里找到<http://conda.pydata.org/miniconda.html>`__。
 
 The next step is to create a new conda environment (these are analogous to a
 virtualenv but they also allow you to specify precisely which Python version
 to install also). Run the following commands from a terminal window::
+下一步是创建一个新的conda环境（跟virtualenv相似，并且允许你精确指定所使用的Python版本）。
 
     conda create -n name_of_my_env python
 
 This will create a minimal environment with only Python installed in it.
 To put your self inside this environment run::
+这会创建一个仅安装了Python的最小环境。
+运行命令进入这个环境：
 
     source activate name_of_my_env
 
 On Windows the command is::
+Windows下的命令是：
 
     activate name_of_my_env
 
 The final step required is to install pandas. This can be done with the
 following command::
+最后的步骤是安装pandas，用如下命令完成：
 
     conda install pandas
 
 To install a specific pandas version::
+安装指定版本的pandas：
 
     conda install pandas=0.13.1
 
 To install other packages, IPython for example::
+安装其他包，例如IPython：
 
     conda install ipython
 
 To install the full `Anaconda <http://docs.continuum.io/anaconda/>`__
 distribution::
+安装完整的`Anaconda <http://docs.continuum.io/anaconda/>`__发行版：
 
     conda install anaconda
 
 If you require any packages that are available to pip but not conda, simply
 install pip, and use pip to install these packages::
+如果你需要pip中有而conda中无的包，很简单的安装pip，然后用pip安装这些包：
 
     conda install pip
     pip install django
 
 Installing from PyPI
+从PyPI安装
 ~~~~~~~~~~~~~~~~~~~~
 
 pandas can be installed via pip from
 `PyPI <http://pypi.python.org/pypi/pandas>`__.
+pandas可以用pip从`PyPI <http://pypi.python.org/pypi/pandas>`__安装。
 
 ::
 
@@ -179,12 +192,16 @@ pandas can be installed via pip from
 This will likely require the installation of a number of dependencies,
 including NumPy, will require a compiler to compile required bits of code,
 and can take a few minutes to complete.
+很可能会需要安装一些依赖，包括NumPy，需要一个编译器去编译一些其依赖的代码，并且需要几分钟才能完成。
 
 Installing using your Linux distribution's package manager.
+通过你的Linux发行版的包管理器安装。
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The commands in this table will install pandas for Python 2 from your distribution.
 To install pandas for Python 3 you may need to use the package ``python3-pandas``.
+如下表格的命令会从你的发行版安装基于Python 2的pandas。
+你可能需要使用``python3-pandas``包来安装基于Python 3的pandas。
 
 .. csv-table::
     :header: "Distribution", "Status", "Download / Repository Link", "Install method"
