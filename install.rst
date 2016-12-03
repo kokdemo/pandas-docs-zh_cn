@@ -225,11 +225,14 @@ To install pandas for Python 3 you may need to use the package ``python3-pandas`
 
 
 Installing from source
+从源码安装
 ~~~~~~~~~~~~~~~~~~~~~~
 
 See the :ref:`contributing documentation <contributing>` for complete instructions on building from the git source tree. Further, see :ref:`creating a development environment <contributing.dev_env>` if you wish to create a *pandas* development environment.
+查看:ref:`帮助文档<contributing>` 来获取完整的，从git源码安装的说明。更多内容，如果你想建立 *pandas* 开发环境，查看:ref:`建立开发环境<contributing.dev_env>`。
 
 Running the test suite
+运行测试套件
 ~~~~~~~~~~~~~~~~~~~~~~
 
 pandas is equipped with an exhaustive set of unit tests covering about 97% of
@@ -237,6 +240,8 @@ the codebase as of this writing. To run it on your machine to verify that
 everything is working (and you have all of the dependencies, soft and hard,
 installed), make sure you have `nose
 <http://readthedocs.org/docs/nose/en/latest/>`__ and run:
+当前，pandas配备了一套详尽的、代码覆盖率在98%左右的测试集。
+如需在你的机器上运行测试去验证所有的东西都工作正常（以及所有软硬件依赖都已安装），需要确定你已经安装了`nose <http://readthedocs.org/docs/nose/en/latest/>`__，然后运行：
 
 ::
 
@@ -259,6 +264,7 @@ installed), make sure you have `nose
     OK (SKIP=117)
 
 Dependencies
+依赖
 ------------
 
 * `setuptools <http://pythonhosted.org/setuptools>`__
@@ -269,29 +275,38 @@ Dependencies
 .. _install.recommended_dependencies:
 
 Recommended Dependencies
+推荐的依赖
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 * `numexpr <https://github.com/pydata/numexpr>`__: for accelerating certain numerical operations.
   ``numexpr`` uses multiple cores as well as smart chunking and caching to achieve large speedups.
   If installed, must be Version 2.1 or higher (excluding a buggy 2.4.4). Version 2.4.6 or higher is highly recommended.
+* `numexpr <https://github.com/pydata/numexpr>`__：加速一些数学运算。
+  ``numexpr``利用多个核心，以及智能分块及缓存，来达到性能大幅提高的目的。
+  版本必须高于2.1（除了有bug的2.4.4），强烈推荐2.4.6及更高版本。
 
 * `bottleneck <http://berkeleyanalytics.com/bottleneck>`__: for accelerating certain types of ``nan``
   evaluations. ``bottleneck`` uses specialized cython routines to achieve large speedups.
+* `bottleneck <http://berkeleyanalytics.com/bottleneck>`__：加速一些``nan``类型的求值。``bottleneck``使用专门的cython优化来提高性能。
 
 .. note::
 
    You are highly encouraged to install these libraries, as they provide large speedups, especially
    if working with large data sets.
+   强烈推荐你安装这些库，因为它们大幅提高了性能，尤其是工作在大数据集上的时候。
 
 
 .. _install.optional_dependencies:
 
 Optional Dependencies
+可选的依赖
 ~~~~~~~~~~~~~~~~~~~~~
 
 * `Cython <http://www.cython.org>`__: Only necessary to build development
   version. Version 0.19.1 or higher.
+* `Cython <http://www.cython.org>`__：只在构建开发版本时需要，0.19.1或更高版本。
 * `SciPy <http://www.scipy.org>`__: miscellaneous statistical functions
+* `SciPy <http://www.scipy.org>`__：各种各样的统计函数。
 * `xarray <http://xarray.pydata.org>`__: pandas like handling for > 2 dims, needed for converting Panels to xarray objects. Version 0.7.0 or higher is recommended.
 * `PyTables <http://www.pytables.org>`__: necessary for HDF5-based storage. Version 3.0.0 or higher required, Version 3.2.1 or higher highly recommended.
 * `SQLAlchemy <http://www.sqlalchemy.org>`__: for SQL database support. Version 0.8.1 or higher recommended. Besides SQLAlchemy, you also need a database specific driver. You can find an overview of supported drivers for each SQL dialect in the `SQLAlchemy docs <http://docs.sqlalchemy.org/en/latest/dialects/index.html>`__. Some common drivers are:
@@ -340,14 +355,18 @@ Optional Dependencies
        `lxml`_ or `html5lib`_ or both.
        :func:`~pandas.read_html` will **not** work with *only*
        `BeautifulSoup4`_ installed.
+     * 如果你需要安装`BeautifulSoup4`_，你必须先安装`lxml`_、`html5lib`_两者其中之一或者全部。
      * You are highly encouraged to read :ref:`HTML reading gotchas
        <html-gotchas>`. It explains issues surrounding the installation and
        usage of the above three libraries
+     * 强烈建议你阅读:ref:`HTML reading gotchas <html-gotchas>`。这份文档解释了安装及使用上面三个库时会遇到的问题。
      * You may need to install an older version of `BeautifulSoup4`_:
        Versions 4.2.1, 4.1.3 and 4.0.2 have been confirmed for 64 and 32-bit
        Ubuntu/Debian
+     * 你也许需要安装一个版本较老的`BeautifulSoup4`_：在64及32位Ubuntu/Debian上已经确认的是4.2.1，4.1.3及4.0.2。
      * Additionally, if you're using `Anaconda`_ you should definitely
        read :ref:`the gotchas about HTML parsing libraries <html-gotchas>`
+     * 另外，如果你使用`Anaconda`_，你非常应该看看:ref:`the gotchas about HTML parsing libraries <html-gotchas>`。
 
   .. note::
 
@@ -359,6 +378,13 @@ Optional Dependencies
 
        to get the necessary dependencies for installation of `lxml`_. This
        will prevent further headaches down the line.
+     * 如果你的操作系统中有``apt-get``，你可以
+
+       .. code-block:: sh
+
+          sudo apt-get build-dep python-lxml
+
+       获取`lxml`_需要的依赖。这样可以防止一些可能会遇到的编译问题。
 
 
 .. _html5lib: https://github.com/html5lib/html5lib-python
@@ -372,3 +398,6 @@ Optional Dependencies
    work. Hence, it is highly recommended that you install these. A packaged
    distribution like `Anaconda <http://docs.continuum.io/anaconda/>`__, or `Enthought Canopy
    <http://enthought.com/products/canopy>`__ may be worth considering.
+   如果没有可选依赖，一些有用的特性可能无法工作。因此强烈推荐安装这些依赖。
+   一个打包好的发行版如`Anaconda <http://docs.continuum.io/anaconda/>`__，或`Enthought Canopy
+   <http://enthought.com/products/canopy>`也许值得考虑。
