@@ -4,45 +4,60 @@
 
 ============
 Installation
+安装
 ============
 
 The easiest way for the majority of users to install pandas is to install it
 as part of the `Anaconda <http://docs.continuum.io/anaconda/>`__ distribution, a
 cross platform distribution for data analysis and scientific computing.
 This is the recommended installation method for most users.
+对多数用户来说，安装pandas最轻松的方式是安装`Anaconda <http://docs.continuum.io/anaconda/>`__，其中包含了pandas。
+Anaconda是一个跨平台Python发行版，包含conda包和环境管理器，以及许多用于数据分析，数据科学和科学计算的软件包。
+对绝大多数用户来说这是推荐的安装方式。
 
 Instructions for installing from source,
 `PyPI <http://pypi.python.org/pypi/pandas>`__, various Linux distributions, or a
 `development version <http://github.com/pydata/pandas>`__ are also provided.
+提供了通过源码、`PyPI <http://pypi.python.org/pypi/pandas>`__、及许多Linux发行版进行安装的说明。
+同时也提供了`development 版本 <http://github.com/pydata/pandas>`__。
 
 Python version support
+支持的Python版本
 ----------------------
 
 Officially Python 2.7, 3.4, and 3.5
+官方Python 2.7、3.4及3.5
 
 Installing pandas
+安装pandas
 -----------------
 
 Trying out pandas, no installation required!
+立即试用，无需安装！
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The easiest way to start experimenting with pandas doesn't involve installing
 pandas at all.
+在最轻松的情况下试用pandas，无需关心安装。
 
 `Wakari <https://wakari.io>`__ is a free service that provides a hosted
 `IPython Notebook <http://ipython.org/notebook.html>`__ service in the cloud.
+`Wakari <https://wakari.io>`__是一个云端提供`IPython Notebook <http://ipython.org/notebook.html>`__的免费服务。
 
 Simply create an account, and have access to pandas from within your brower via
 an `IPython Notebook <http://ipython.org/notebook.html>`__ in a few minutes.
+几分钟内就可以简单的创建一个帐号，然后在浏览器内通过`IPython Notebook <http://ipython.org/notebook.html>`__使用pandas。
 
 .. _install.anaconda:
 
 Installing pandas with Anaconda
+通过Anaconda安装
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Installing pandas and the rest of the `NumPy <http://www.numpy.org/>`__ and
 `SciPy <http://www.scipy.org/>`__ stack can be a little
 difficult for inexperienced users.
+对经验不足的用户来说，安装pandas以及接下来的`NumPy <http://www.numpy.org/>`__、`SciPy <http://www.scipy.org/>`__相关包是较为困难的事情。
 
 The simplest way to install not only pandas, but Python and the most popular
 packages that make up the `SciPy <http://www.scipy.org/>`__ stack
@@ -51,96 +66,124 @@ packages that make up the `SciPy <http://www.scipy.org/>`__ stack
 `Anaconda <http://docs.continuum.io/anaconda/>`__, a cross-platform
 (Linux, Mac OS X, Windows) Python distribution for data analytics and
 scientific computing.
+最简单的方法是，不局限于安装pandas，而是包括Python及由最流行包（`IPython <http://ipython.org/>`__, `NumPy <http://www.numpy.org/>`__,
+`Matplotlib <http://matplotlib.org/>`__, ...）组成的`SciPy <http://www.scipy.org/>`__集成包在内的`Anaconda <http://docs.continuum.io/anaconda/>`__。
+这是一个用于数据分析及科学计算的跨平台（Linux, Mac OS X, Windows）Python发行版。
 
 After running a simple installer, the user will have access to pandas and the
 rest of the `SciPy <http://www.scipy.org/>`__ stack without needing to install
 anything else, and without needing to wait for any software to be compiled.
+运行一个简单的安装器，用户就可以使用pandas以及`SciPy <http://www.scipy.org/>`__集成包内其他内容，不必再安装任何东西，也不必等待任何软件编译。
 
 Installation instructions for `Anaconda <http://docs.continuum.io/anaconda/>`__
 `can be found here <http://docs.continuum.io/anaconda/install.html>`__.
+`Anaconda <http://docs.continuum.io/anaconda/>`__的安装说明可以在`此处 <http://docs.continuum.io/anaconda/install.html>`__找到。
 
 A full list of the packages available as part of the
 `Anaconda <http://docs.continuum.io/anaconda/>`__ distribution
 `can be found here <http://docs.continuum.io/anaconda/pkg-docs.html>`__.
+`Anaconda <http://docs.continuum.io/anaconda/>`__发行版中可用包的完整列表可以在`这里 <http://docs.continuum.io/anaconda/pkg-docs.html>`__找到。
 
 An additional advantage of installing with Anaconda is that you don't require
 admin rights to install it, it will install in the user's home directory, and
 this also makes it trivial to delete Anaconda at a later date (just delete
 that folder).
+随Anaconda还有无需管理员权限这个额外的好处，它安装在用户的home目录下，将来要删除它也很容易（删除该目录即可）。
 
 .. _install.miniconda:
 
 Installing pandas with Miniconda
+随Minicnoda一起安装pandas
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The previous section outlined how to get pandas installed as part of the
 `Anaconda <http://docs.continuum.io/anaconda/>`__ distribution.
 However this approach means you will install well over one hundred packages
 and involves downloading the installer which is a few hundred megabytes in size.
+前面的小节概述了如何让pandas作为`Anaconda <http://docs.continuum.io/anaconda/>`__ 发行版的一部分共同安装。
+然而这种方式意味着你要安装远多于100个包，并且需要下载100M出头的安装器。
 
 If you want to have more control on which packages, or have a limited internet
 bandwidth, then installing pandas with
 `Miniconda <http://conda.pydata.org/miniconda.html>`__ may be a better solution.
+如果你想对这些包有更多的控制权，或者只有带宽有限的网络，那用`Miniconda <http://conda.pydata.org/miniconda.html>`__安装pandas可能是个更好的选择。
 
 `Conda <http://conda.pydata.org/docs/>`__ is the package manager that the
 `Anaconda <http://docs.continuum.io/anaconda/>`__ distribution is built upon.
 It is a package manager that is both cross-platform and language agnostic
 (it can play a similar role to a pip and virtualenv combination).
+`Conda <http://conda.pydata.org/docs/>`__是`Anaconda <http://docs.continuum.io/anaconda/>`__发行版内置的包管理器。
+这是一个跨平台且语言无关的包管理器。（扮演类似于pip及virtualenv二者结合的角色。）
 
 `Miniconda <http://conda.pydata.org/miniconda.html>`__ allows you to create a
 minimal self contained Python installation, and then use the
 `Conda <http://conda.pydata.org/docs/>`__ command to install additional packages.
+`Miniconda <http://conda.pydata.org/miniconda.html>`__允许你创建一个自包含的最小Python环境，
+然后用`Conda <http://conda.pydata.org/docs/>`__命令安装额外的包。
 
 First you will need `Conda <http://conda.pydata.org/docs/>`__ to be installed and
 downloading and running the `Miniconda
 <http://conda.pydata.org/miniconda.html>`__
 will do this for you. The installer
 `can be found here <http://conda.pydata.org/miniconda.html>`__
+首先你需要将`Conda <http://conda.pydata.org/docs/>`__安装好，下载及安装`Miniconda <http://conda.pydata.org/miniconda.html>`__即可。
+安装器可以在`这里找到<http://conda.pydata.org/miniconda.html>`__。
 
 The next step is to create a new conda environment (these are analogous to a
 virtualenv but they also allow you to specify precisely which Python version
 to install also). Run the following commands from a terminal window::
+下一步是创建一个新的conda环境（跟virtualenv相似，并且允许你精确指定所使用的Python版本）。
 
     conda create -n name_of_my_env python
 
 This will create a minimal environment with only Python installed in it.
 To put your self inside this environment run::
+这会创建一个仅安装了Python的最小环境。
+运行命令进入这个环境：
 
     source activate name_of_my_env
 
 On Windows the command is::
+Windows下的命令是：
 
     activate name_of_my_env
 
 The final step required is to install pandas. This can be done with the
 following command::
+最后的步骤是安装pandas，用如下命令完成：
 
     conda install pandas
 
 To install a specific pandas version::
+安装指定版本的pandas：
 
     conda install pandas=0.13.1
 
 To install other packages, IPython for example::
+安装其他包，例如IPython：
 
     conda install ipython
 
 To install the full `Anaconda <http://docs.continuum.io/anaconda/>`__
 distribution::
+安装完整的`Anaconda <http://docs.continuum.io/anaconda/>`__发行版：
 
     conda install anaconda
 
 If you require any packages that are available to pip but not conda, simply
 install pip, and use pip to install these packages::
+如果你需要pip中有而conda中无的包，很简单的安装pip，然后用pip安装这些包：
 
     conda install pip
     pip install django
 
 Installing from PyPI
+从PyPI安装
 ~~~~~~~~~~~~~~~~~~~~
 
 pandas can be installed via pip from
 `PyPI <http://pypi.python.org/pypi/pandas>`__.
+pandas可以用pip从`PyPI <http://pypi.python.org/pypi/pandas>`__安装。
 
 ::
 
@@ -149,12 +192,16 @@ pandas can be installed via pip from
 This will likely require the installation of a number of dependencies,
 including NumPy, will require a compiler to compile required bits of code,
 and can take a few minutes to complete.
+很可能会需要安装一些依赖，包括NumPy，需要一个编译器去编译一些其依赖的代码，并且需要几分钟才能完成。
 
 Installing using your Linux distribution's package manager.
+通过你的Linux发行版的包管理器安装。
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The commands in this table will install pandas for Python 2 from your distribution.
 To install pandas for Python 3 you may need to use the package ``python3-pandas``.
+如下表格的命令会从你的发行版安装基于Python 2的pandas。
+你可能需要使用``python3-pandas``包来安装基于Python 3的pandas。
 
 .. csv-table::
     :header: "Distribution", "Status", "Download / Repository Link", "Install method"
@@ -178,11 +225,14 @@ To install pandas for Python 3 you may need to use the package ``python3-pandas`
 
 
 Installing from source
+从源码安装
 ~~~~~~~~~~~~~~~~~~~~~~
 
 See the :ref:`contributing documentation <contributing>` for complete instructions on building from the git source tree. Further, see :ref:`creating a development environment <contributing.dev_env>` if you wish to create a *pandas* development environment.
+查看:ref:`帮助文档<contributing>` 来获取完整的，从git源码安装的说明。更多内容，如果你想建立 *pandas* 开发环境，查看:ref:`建立开发环境<contributing.dev_env>`。
 
 Running the test suite
+运行测试套件
 ~~~~~~~~~~~~~~~~~~~~~~
 
 pandas is equipped with an exhaustive set of unit tests covering about 97% of
@@ -190,6 +240,8 @@ the codebase as of this writing. To run it on your machine to verify that
 everything is working (and you have all of the dependencies, soft and hard,
 installed), make sure you have `nose
 <http://readthedocs.org/docs/nose/en/latest/>`__ and run:
+当前，pandas配备了一套详尽的、代码覆盖率在98%左右的测试集。
+如需在你的机器上运行测试去验证所有的东西都工作正常（以及所有软硬件依赖都已安装），需要确定你已经安装了`nose <http://readthedocs.org/docs/nose/en/latest/>`__，然后运行：
 
 ::
 
@@ -212,6 +264,7 @@ installed), make sure you have `nose
     OK (SKIP=117)
 
 Dependencies
+依赖
 ------------
 
 * `setuptools <http://pythonhosted.org/setuptools>`__
@@ -222,29 +275,38 @@ Dependencies
 .. _install.recommended_dependencies:
 
 Recommended Dependencies
+推荐的依赖
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 * `numexpr <https://github.com/pydata/numexpr>`__: for accelerating certain numerical operations.
   ``numexpr`` uses multiple cores as well as smart chunking and caching to achieve large speedups.
   If installed, must be Version 2.1 or higher (excluding a buggy 2.4.4). Version 2.4.6 or higher is highly recommended.
+* `numexpr <https://github.com/pydata/numexpr>`__：加速一些数学运算。
+  ``numexpr``利用多个核心，以及智能分块及缓存，来达到性能大幅提高的目的。
+  版本必须高于2.1（除了有bug的2.4.4），强烈推荐2.4.6及更高版本。
 
 * `bottleneck <http://berkeleyanalytics.com/bottleneck>`__: for accelerating certain types of ``nan``
   evaluations. ``bottleneck`` uses specialized cython routines to achieve large speedups.
+* `bottleneck <http://berkeleyanalytics.com/bottleneck>`__：加速一些``nan``类型的求值。``bottleneck``使用专门的cython优化来提高性能。
 
 .. note::
 
    You are highly encouraged to install these libraries, as they provide large speedups, especially
    if working with large data sets.
+   强烈推荐你安装这些库，因为它们大幅提高了性能，尤其是工作在大数据集上的时候。
 
 
 .. _install.optional_dependencies:
 
 Optional Dependencies
+可选的依赖
 ~~~~~~~~~~~~~~~~~~~~~
 
 * `Cython <http://www.cython.org>`__: Only necessary to build development
   version. Version 0.19.1 or higher.
+* `Cython <http://www.cython.org>`__：只在构建开发版本时需要，0.19.1或更高版本。
 * `SciPy <http://www.scipy.org>`__: miscellaneous statistical functions
+* `SciPy <http://www.scipy.org>`__：各种各样的统计函数。
 * `xarray <http://xarray.pydata.org>`__: pandas like handling for > 2 dims, needed for converting Panels to xarray objects. Version 0.7.0 or higher is recommended.
 * `PyTables <http://www.pytables.org>`__: necessary for HDF5-based storage. Version 3.0.0 or higher required, Version 3.2.1 or higher highly recommended.
 * `SQLAlchemy <http://www.sqlalchemy.org>`__: for SQL database support. Version 0.8.1 or higher recommended. Besides SQLAlchemy, you also need a database specific driver. You can find an overview of supported drivers for each SQL dialect in the `SQLAlchemy docs <http://docs.sqlalchemy.org/en/latest/dialects/index.html>`__. Some common drivers are:
@@ -293,14 +355,18 @@ Optional Dependencies
        `lxml`_ or `html5lib`_ or both.
        :func:`~pandas.read_html` will **not** work with *only*
        `BeautifulSoup4`_ installed.
+     * 如果你需要安装`BeautifulSoup4`_，你必须先安装`lxml`_、`html5lib`_两者其中之一或者全部。
      * You are highly encouraged to read :ref:`HTML reading gotchas
        <html-gotchas>`. It explains issues surrounding the installation and
        usage of the above three libraries
+     * 强烈建议你阅读:ref:`HTML reading gotchas <html-gotchas>`。这份文档解释了安装及使用上面三个库时会遇到的问题。
      * You may need to install an older version of `BeautifulSoup4`_:
        Versions 4.2.1, 4.1.3 and 4.0.2 have been confirmed for 64 and 32-bit
        Ubuntu/Debian
+     * 你也许需要安装一个版本较老的`BeautifulSoup4`_：在64及32位Ubuntu/Debian上已经确认的是4.2.1，4.1.3及4.0.2。
      * Additionally, if you're using `Anaconda`_ you should definitely
        read :ref:`the gotchas about HTML parsing libraries <html-gotchas>`
+     * 另外，如果你使用`Anaconda`_，你非常应该看看:ref:`the gotchas about HTML parsing libraries <html-gotchas>`。
 
   .. note::
 
@@ -312,6 +378,13 @@ Optional Dependencies
 
        to get the necessary dependencies for installation of `lxml`_. This
        will prevent further headaches down the line.
+     * 如果你的操作系统中有``apt-get``，你可以
+
+       .. code-block:: sh
+
+          sudo apt-get build-dep python-lxml
+
+       获取`lxml`_需要的依赖。这样可以防止一些可能会遇到的编译问题。
 
 
 .. _html5lib: https://github.com/html5lib/html5lib-python
@@ -325,3 +398,6 @@ Optional Dependencies
    work. Hence, it is highly recommended that you install these. A packaged
    distribution like `Anaconda <http://docs.continuum.io/anaconda/>`__, or `Enthought Canopy
    <http://enthought.com/products/canopy>`__ may be worth considering.
+   如果没有可选依赖，一些有用的特性可能无法工作。因此强烈推荐安装这些依赖。
+   一个打包好的发行版如`Anaconda <http://docs.continuum.io/anaconda/>`__，或`Enthought Canopy
+   <http://enthought.com/products/canopy>`也许值得考虑。
