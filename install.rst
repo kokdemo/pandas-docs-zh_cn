@@ -3,69 +3,44 @@
 .. currentmodule:: pandas
 
 ============
-Installation
 安装
 ============
 
-The easiest way for the majority of users to install pandas is to install it
-as part of the `Anaconda <http://docs.continuum.io/anaconda/>`__ distribution, a
-cross platform distribution for data analysis and scientific computing.
-This is the recommended installation method for most users.
-对多数用户来说，安装pandas最轻松的方式是安装`Anaconda <http://docs.continuum.io/anaconda/>`__，其中包含了pandas。
-Anaconda是一个跨平台Python发行版，包含conda包和环境管理器，以及许多用于数据分析，数据科学和科学计算的软件包。
+
+对多数用户来说，安装pandas最轻松的方式是安装 `Anaconda <http://docs.continuum.io/anaconda/>`__ ，其中包含了pandas。
+Anaconda 是一个跨平台 Python 发行版，包含 conda 包和环境管理器，以及许多用于数据分析，数据科学和科学计算的软件包。
 对绝大多数用户来说这是推荐的安装方式。
 
-Instructions for installing from source,
-`PyPI <http://pypi.python.org/pypi/pandas>`__, various Linux distributions, or a
-`development version <http://github.com/pydata/pandas>`__ are also provided.
-提供了通过源码、`PyPI <http://pypi.python.org/pypi/pandas>`__、及许多Linux发行版进行安装的说明。
-同时也提供了`development 版本 <http://github.com/pydata/pandas>`__。
+提供了通过源码、 `PyPI <http://pypi.python.org/pypi/pandas>`__ 、及许多Linux发行版进行安装的说明。
+同时也提供了 `development 版本 <http://github.com/pydata/pandas>`__ 。
 
-Python version support
 支持的Python版本
 ----------------------
 
-Officially Python 2.7, 3.4, and 3.5
-官方Python 2.7、3.4及3.5
+官方 Python 2.7、3.4 及3.5
 
-Installing pandas
 安装pandas
 -----------------
 
-Trying out pandas, no installation required!
 立即试用，无需安装！
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The easiest way to start experimenting with pandas doesn't involve installing
-pandas at all.
-在最轻松的情况下试用pandas，无需关心安装。
 
-`Wakari <https://wakari.io>`__ is a free service that provides a hosted
-`IPython Notebook <http://ipython.org/notebook.html>`__ service in the cloud.
-`Wakari <https://wakari.io>`__是一个云端提供`IPython Notebook <http://ipython.org/notebook.html>`__的免费服务。
+在最轻松的情况下试用 pandas ，无需关心安装。
 
-Simply create an account, and have access to pandas from within your brower via
-an `IPython Notebook <http://ipython.org/notebook.html>`__ in a few minutes.
-几分钟内就可以简单的创建一个帐号，然后在浏览器内通过`IPython Notebook <http://ipython.org/notebook.html>`__使用pandas。
+
+`Wakari <https://wakari.io>`__ 是一个云端提供 `IPython Notebook <http://ipython.org/notebook.html>`__ 的免费服务。
+
+几分钟内就可以简单的创建一个帐号，然后在浏览器内通过 `IPython Notebook <http://ipython.org/notebook.html>`__ 使用pandas。
 
 .. _install.anaconda:
 
-Installing pandas with Anaconda
 通过Anaconda安装
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Installing pandas and the rest of the `NumPy <http://www.numpy.org/>`__ and
-`SciPy <http://www.scipy.org/>`__ stack can be a little
-difficult for inexperienced users.
 对经验不足的用户来说，安装pandas以及接下来的`NumPy <http://www.numpy.org/>`__、`SciPy <http://www.scipy.org/>`__相关包是较为困难的事情。
 
-The simplest way to install not only pandas, but Python and the most popular
-packages that make up the `SciPy <http://www.scipy.org/>`__ stack
-(`IPython <http://ipython.org/>`__, `NumPy <http://www.numpy.org/>`__,
-`Matplotlib <http://matplotlib.org/>`__, ...) is with
-`Anaconda <http://docs.continuum.io/anaconda/>`__, a cross-platform
-(Linux, Mac OS X, Windows) Python distribution for data analytics and
-scientific computing.
+
 最简单的方法是，不局限于安装pandas，而是包括Python及由最流行包（`IPython <http://ipython.org/>`__, `NumPy <http://www.numpy.org/>`__,
 `Matplotlib <http://matplotlib.org/>`__, ...）组成的`SciPy <http://www.scipy.org/>`__集成包在内的`Anaconda <http://docs.continuum.io/anaconda/>`__。
 这是一个用于数据分析及科学计算的跨平台（Linux, Mac OS X, Windows）Python发行版。
@@ -164,42 +139,35 @@ To install other packages, IPython for example::
 
     conda install ipython
 
-To install the full `Anaconda <http://docs.continuum.io/anaconda/>`__
-distribution::
 安装完整的`Anaconda <http://docs.continuum.io/anaconda/>`__发行版：
 
+::
     conda install anaconda
 
-If you require any packages that are available to pip but not conda, simply
-install pip, and use pip to install these packages::
 如果你需要pip中有而conda中无的包，很简单的安装pip，然后用pip安装这些包：
+
+::
 
     conda install pip
     pip install django
 
-Installing from PyPI
-从PyPI安装
+从 PyPI 安装
 ~~~~~~~~~~~~~~~~~~~~
 
-pandas can be installed via pip from
-`PyPI <http://pypi.python.org/pypi/pandas>`__.
-pandas可以用pip从`PyPI <http://pypi.python.org/pypi/pandas>`__安装。
+pandas可以用pip从 `PyPI <http://pypi.python.org/pypi/pandas>`__ 安装。
 
 ::
 
     pip install pandas
 
-This will likely require the installation of a number of dependencies,
-including NumPy, will require a compiler to compile required bits of code,
-and can take a few minutes to complete.
+
 很可能会需要安装一些依赖，包括NumPy，需要一个编译器去编译一些其依赖的代码，并且需要几分钟才能完成。
 
-Installing using your Linux distribution's package manager.
+
 通过你的Linux发行版的包管理器安装。
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The commands in this table will install pandas for Python 2 from your distribution.
-To install pandas for Python 3 you may need to use the package ``python3-pandas``.
+
 如下表格的命令会从你的发行版安装基于Python 2的pandas。
 你可能需要使用``python3-pandas``包来安装基于Python 3的pandas。
 
@@ -217,29 +185,16 @@ To install pandas for Python 3 you may need to use the package ``python3-pandas`
     Centos/RHEL, stable, `EPEL repository <https://admin.fedoraproject.org/pkgdb/package/rpms/python-pandas/>`__ , ``yum install python-pandas``
 
 
-
-
-
-
-
-
-
-Installing from source
 从源码安装
 ~~~~~~~~~~~~~~~~~~~~~~
 
-See the :ref:`contributing documentation <contributing>` for complete instructions on building from the git source tree. Further, see :ref:`creating a development environment <contributing.dev_env>` if you wish to create a *pandas* development environment.
 查看:ref:`帮助文档<contributing>` 来获取完整的，从git源码安装的说明。更多内容，如果你想建立 *pandas* 开发环境，查看:ref:`建立开发环境<contributing.dev_env>`。
 
-Running the test suite
+
 运行测试套件
 ~~~~~~~~~~~~~~~~~~~~~~
 
-pandas is equipped with an exhaustive set of unit tests covering about 97% of
-the codebase as of this writing. To run it on your machine to verify that
-everything is working (and you have all of the dependencies, soft and hard,
-installed), make sure you have `nose
-<http://readthedocs.org/docs/nose/en/latest/>`__ and run:
+
 当前，pandas配备了一套详尽的、代码覆盖率在98%左右的测试集。
 如需在你的机器上运行测试去验证所有的东西都工作正常（以及所有软硬件依赖都已安装），需要确定你已经安装了`nose <http://readthedocs.org/docs/nose/en/latest/>`__，然后运行：
 
@@ -394,10 +349,6 @@ Optional Dependencies
 
 .. note::
 
-   Without the optional dependencies, many useful features will not
-   work. Hence, it is highly recommended that you install these. A packaged
-   distribution like `Anaconda <http://docs.continuum.io/anaconda/>`__, or `Enthought Canopy
-   <http://enthought.com/products/canopy>`__ may be worth considering.
    如果没有可选依赖，一些有用的特性可能无法工作。因此强烈推荐安装这些依赖。
-   一个打包好的发行版如`Anaconda <http://docs.continuum.io/anaconda/>`__，或`Enthought Canopy
-   <http://enthought.com/products/canopy>`也许值得考虑。
+   一个打包好的发行版如 `Anaconda <http://docs.continuum.io/anaconda/>`__ ，或 `Enthought Canopy
+   <http://enthought.com/products/canopy>` 也许值得考虑。
