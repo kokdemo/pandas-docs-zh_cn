@@ -37,12 +37,13 @@ DataFrame 的内存使用
 
     df.info()
 
+加号标志表示实际的内存使用量会更高一些，因为 pandas 无法计算类型为 ``dtype=object`` 的列中的内存使用。
+
 ..
   The ``+`` symbol indicates that the true memory usage could be higher, because
   pandas does not count the memory used by values in columns with
   ``dtype=object``.
 
-加号标志表示实际的内存使用量会更高一些，因为 pandas 无法计算类型为 ``dtype=object`` 的列中的内存使用。
 
 .. versionadded:: 0.17.1
 
@@ -58,11 +59,14 @@ DataFrame 的内存使用
 
    df.info(memory_usage='deep')
 
+默认的显示选项是  ``True`` ，但可以在调用 ``df.info()`` 时，通过 ``memory_usage`` 进行修改。
+
 ..
   By default the display option is set to ``True`` but can be explicitly
   overridden by passing the ``memory_usage`` argument when invoking ``df.info()``.
 
-默认的显示选项是  ``True`` ，但可以在调用 ``df.info()`` 时，通过 ``memory_usage`` 进行修改。
+每一列的内存使用可以调用 ``memory_usage`` 方法。它将会翻译一个 Series 包括每一列的列名和以 bytes 表示的内存用量。
+对于以上的 dataframe，每一列的内存使用和总体 dataframe 的内存使用都可以通过 memory_usage 方法显示出来：
 
 ..
   The memory usage of each column can be found by calling the ``memory_usage``
@@ -71,9 +75,6 @@ DataFrame 的内存使用
   the memory usage of each column and the total memory usage of the
   dataframe can be found with the memory_usage method:
 
-每一列的内存使用可以调用 ``memory_usage`` 方法。它将会翻译一个 Series 包括每一列的列名和以 bytes 表示的内存用量。
-对于以上的 dataframe，每一列的内存使用和总体 dataframe 的内存使用都可以通过 memory_usage 方法显示出来：
-
 .. ipython:: python
 
     df.memory_usage()
@@ -81,16 +82,19 @@ DataFrame 的内存使用
     # total memory usage of dataframe
     df.memory_usage().sum()
 
+默认情况下，dataframe 的索引的内存用量也会显示在返回的 Series 中，如不想显示它，可以使用 ``index=False`` 参数。
+
 ..
   By default the memory usage of the dataframe's index is shown in the
   returned Series, the memory usage of the index can be suppressed by passing
   the ``index=False`` argument:
 
-默认情况下，dataframe 的索引的内存用量也会显示在返回的 Series 中，如不想显示它，可以使用 ``index=False`` 参数。
 
 .. ipython:: python
 
     df.memory_usage(index=False)
+
+``info`` 方法显示的内存使用量会利用 ``memory_usage`` 方法来确定 dataframe 的内存使用量，同时也会格式化输出可读的单位（二进制表示，比如 1KB = 1024 bytes）。
 
 ..
   The memory usage displayed by the ``info`` method utilizes the
@@ -98,12 +102,11 @@ DataFrame 的内存使用
   while also formatting the output in human-readable units (base-2
   representation; i.e., 1KB = 1024 bytes).
 
-``info`` 方法显示的内存使用量会利用 ``memory_usage`` 方法来确定 dataframe 的内存使用量，同时也会格式化输出可读的单位（二进制表示，比如 1KB = 1024 bytes）。
-
 .. See also :ref:`Categorical Memory Usage <categorical.memory>`.
 看更多 :ref:`Categorical Memory Usage <categorical.memory>`。
 
 .. Byte-Ordering Issues
+
 字节顺序问题
 --------------------
 ..
@@ -122,14 +125,15 @@ DataFrame 的内存使用
    newx = x.byteswap().newbyteorder() # force native byteorder
    s = pd.Series(newx)
 
+查看 `NumPy 字节顺序<http://docs.scipy.org/doc/numpy/user/basics.byteswapping.html>`__ 获取更多信息。
+
 ..
   See `the NumPy documentation on byte order
   <http://docs.scipy.org/doc/numpy/user/basics.byteswapping.html>`__ for more
   details.
 
-查看 `NumPy 字节顺序<http://docs.scipy.org/doc/numpy/user/basics.byteswapping.html>`__ 获取更多信息。
-
 .. Visualizing Data in Qt applications
+
 在Qt 程序中可视化数据
 -----------------------------------
 
